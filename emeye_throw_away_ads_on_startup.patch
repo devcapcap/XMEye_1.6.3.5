@@ -1,0 +1,242 @@
+diff --git a/apktool.yml b/apktool.yml
+index c265c060..7089eb81 100644
+--- a/apktool.yml
++++ b/apktool.yml
+@@ -1,5 +1,5 @@
+ !!brut.androlib.apk.ApkInfo
+-apkFileName: XMEye_1.6.3.5_Apkpure.apk
++apkFileName: XMEye_2.0.0.0_no_ads.apk
+ doNotCompress:
+ - resources.arsc
+ - META-INF/androidx.activity_activity.version
+@@ -179,5 +179,5 @@ usesFramework:
+   tag: null
+ version: 2.8.1
+ versionInfo:
+-  versionCode: '16355'
+-  versionName: 1.6.3.5
++  versionCode: '20000'
++  versionName: 2.0.0.0
+diff --git a/smali/c/g/b/a/a/k/g.smali b/smali/c/g/b/a/a/k/g.smali
+index 307ac0d3..8f2f512c 100644
+--- a/smali/c/g/b/a/a/k/g.smali
++++ b/smali/c/g/b/a/a/k/g.smali
+@@ -765,7 +765,7 @@
+ 
+     aput-object v1, v3, v5
+ 
+-    const-string v1, "https://googleads.g.doubleclick.net/getconfig/pubsetting?iu=%1$s&msid=%2$s&cld_mode=%3$d"
++    const-string v1, "https://googleads.g..net/getconfig/pubsetting?iu=%1$s&msid=%2$s&cld_mode=%3$d"
+ 
+     .line 16
+     invoke-static {v2, v1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+@@ -835,7 +835,7 @@
+ 
+     aput-object v1, v3, v5
+ 
+-    const-string v1, "https://googleads.g.doubleclick.net/getconfig/pubsetting?client=%1$s&admob_appcc=%2$s&cld_mode=%3$d"
++    const-string v1, "https://googleads.g..net/getconfig/pubsetting?client=%1$s&admob_appcc=%2$s&cld_mode=%3$d"
+ 
+     .line 23
+     invoke-static {v2, v1, v3}, Ljava/lang/String;->format(Ljava/util/Locale;Ljava/lang/String;[Ljava/lang/Object;)Ljava/lang/String;
+diff --git a/smali/c/g/b/e/a/d0/a/a0.smali b/smali/c/g/b/e/a/d0/a/a0.smali
+index de13f101..b9b0b055 100644
+--- a/smali/c/g/b/e/a/d0/a/a0.smali
++++ b/smali/c/g/b/e/a/d0/a/a0.smali
+@@ -116,7 +116,7 @@
+ 
+     new-instance v0, Ljava/util/ArrayList;
+ 
+-    const-string v1, ".doubleclick.net"
++    const-string v1, "..net"
+ 
+     const-string v2, ".googleadservices.com"
+ 
+diff --git a/smali/c/g/b/e/j/a/c20.smali b/smali/c/g/b/e/j/a/c20.smali
+index 76272cd4..a72b21ca 100644
+--- a/smali/c/g/b/e/j/a/c20.smali
++++ b/smali/c/g/b/e/j/a/c20.smali
+@@ -56,7 +56,7 @@
+     goto :goto_1
+ 
+     :cond_1
+-    const-string v1, ".doubleclick.net"
++    const-string v1, "..net"
+ 
+     const-string v2, ".googleadservices.com"
+ 
+diff --git a/smali/c/g/b/e/j/a/py.smali b/smali/c/g/b/e/j/a/py.smali
+index c23cce74..2aeaccc8 100644
+--- a/smali/c/g/b/e/j/a/py.smali
++++ b/smali/c/g/b/e/j/a/py.smali
+@@ -21,13 +21,13 @@
+ 
+     const-string v0, "gads:native:engine_js_url_with_protocol"
+ 
+-    const-string v1, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/native_ads.js"
++    const-string v1, "https://googleads.g..net/mads/static/mad/sdk/native/production/native_ads.js"
+ 
+     invoke-static {v0, v1}, Lc/g/b/e/j/a/wx;->d(Ljava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/wx;
+ 
+     const-string v0, "gads:sdk_core_location"
+ 
+-    const-string v1, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/sdk-core-v40-loader.html"
++    const-string v1, "https://googleads.g..net/mads/static/mad/sdk/native/sdk-core-v40-loader.html"
+ 
+     invoke-static {v0, v1}, Lc/g/b/e/j/a/wx;->d(Ljava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/wx;
+ 
+@@ -37,7 +37,7 @@
+ 
+     const-string v0, "gads:sdk_core_js_location"
+ 
+-    const-string v1, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.js"
++    const-string v1, "https://googleads.g..net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.js"
+ 
+     invoke-static {v0, v1}, Lc/g/b/e/j/a/wx;->d(Ljava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/wx;
+ 
+diff --git a/smali/c/g/b/e/j/a/tw.smali b/smali/c/g/b/e/j/a/tw.smali
+index e3b5b6a9..c97717b2 100644
+--- a/smali/c/g/b/e/j/a/tw.smali
++++ b/smali/c/g/b/e/j/a/tw.smali
+@@ -3783,7 +3783,7 @@
+ 
+     const-string v1, "gads:sdk_core_location:client:html"
+ 
+-    const-string v2, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.html"
++    const-string v2, "https://googleads.g..net/mads/static/mad/sdk/native/production/sdk-core-v40-impl.html"
+ 
+     .line 1
+     invoke-static {v0, v1, v2}, Lc/g/b/e/j/a/kw;->k(ILjava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/kw;
+@@ -4108,7 +4108,7 @@
+ 
+     const-string v2, "gad:mraid:url_banner"
+ 
+-    const-string v12, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/mraid/v3/mraid_app_banner.js"
++    const-string v12, "https://googleads.g..net/mads/static/mad/sdk/native/production/mraid/v3/mraid_app_banner.js"
+ 
+     .line 36
+     invoke-static {v0, v2, v12}, Lc/g/b/e/j/a/kw;->k(ILjava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/kw;
+@@ -4119,7 +4119,7 @@
+ 
+     const-string v2, "gad:mraid:url_expanded_banner"
+ 
+-    const-string v12, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/mraid/v3/mraid_app_expanded_banner.js"
++    const-string v12, "https://googleads.g..net/mads/static/mad/sdk/native/production/mraid/v3/mraid_app_expanded_banner.js"
+ 
+     .line 37
+     invoke-static {v0, v2, v12}, Lc/g/b/e/j/a/kw;->k(ILjava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/kw;
+@@ -4130,7 +4130,7 @@
+ 
+     const-string v2, "gad:mraid:url_interstitial"
+ 
+-    const-string v12, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/production/mraid/v3/mraid_app_interstitial.js"
++    const-string v12, "https://googleads.g..net/mads/static/mad/sdk/native/production/mraid/v3/mraid_app_interstitial.js"
+ 
+     .line 38
+     invoke-static {v0, v2, v12}, Lc/g/b/e/j/a/kw;->k(ILjava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/kw;
+@@ -4457,7 +4457,7 @@
+ 
+     const-string v2, "gads:idless:cookie_modification"
+ 
+-    const-string v7, "=; Max-Age=-1; path=/; domain=.doubleclick.net"
++    const-string v7, "=; Max-Age=-1; path=/; domain=..net"
+ 
+     .line 71
+     invoke-static {v0, v2, v7}, Lc/g/b/e/j/a/kw;->k(ILjava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/kw;
+@@ -4542,7 +4542,7 @@
+ 
+     const-string v2, "gads:webview_cookie_url"
+ 
+-    const-string v7, "googleads.g.doubleclick.net"
++    const-string v7, "googleads.g..net"
+ 
+     .line 80
+     invoke-static {v0, v2, v7}, Lc/g/b/e/j/a/kw;->k(ILjava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/kw;
+@@ -5277,7 +5277,7 @@
+ 
+     const-string v2, "gads:native:engine_url_with_protocol"
+ 
+-    const-string v9, "https://googleads.g.doubleclick.net/mads/static/mad/sdk/native/native_ads.html"
++    const-string v9, "https://googleads.g..net/mads/static/mad/sdk/native/native_ads.html"
+ 
+     .line 163
+     invoke-static {v0, v2, v9}, Lc/g/b/e/j/a/kw;->k(ILjava/lang/String;Ljava/lang/String;)Lc/g/b/e/j/a/kw;
+diff --git a/smali/c/g/b/e/j/a/vr3.smali b/smali/c/g/b/e/j/a/vr3.smali
+index d9ef56bf..7d6f3de6 100644
+--- a/smali/c/g/b/e/j/a/vr3.smali
++++ b/smali/c/g/b/e/j/a/vr3.smali
+@@ -41,11 +41,11 @@
+ 
+     invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+ 
+-    const-string v0, "ad.doubleclick.net"
++    const-string v0, "ad..net"
+ 
+     iput-object v0, p0, Lc/g/b/e/j/a/vr3;->a:Ljava/lang/String;
+ 
+-    const-string v0, ".doubleclick.net"
++    const-string v0, "..net"
+ 
+     const-string v1, ".googleadservices.com"
+ 
+diff --git a/smali_classes2/com/mobile/myeye/VideoWndCtrl.smali b/smali_classes2/com/mobile/myeye/VideoWndCtrl.smali
+index 66c6f84f..c938fbe7 100644
+--- a/smali_classes2/com/mobile/myeye/VideoWndCtrl.smali
++++ b/smali_classes2/com/mobile/myeye/VideoWndCtrl.smali
+@@ -1893,7 +1893,7 @@
+     return-void
+ .end method
+ 
+-.method public setDisableDoubleClick(Z)V
++.method public setDisable(Z)V
+     .locals 0
+ 
+     .line 1
+diff --git a/smali_classes2/com/mobile/myeye/monitor/view/MonitorActivity.smali b/smali_classes2/com/mobile/myeye/monitor/view/MonitorActivity.smali
+index 5ec326ca..4f1c97d2 100644
+--- a/smali_classes2/com/mobile/myeye/monitor/view/MonitorActivity.smali
++++ b/smali_classes2/com/mobile/myeye/monitor/view/MonitorActivity.smali
+@@ -9324,7 +9324,7 @@
+     .line 3
+     iget-object p1, p0, Lcom/mobile/myeye/monitor/view/MonitorActivity;->O:Lcom/mobile/myeye/widget/SplitRelativeLayout;
+ 
+-    invoke-virtual {p1, v1}, Lcom/mobile/myeye/widget/SplitRelativeLayout;->setDoubleClickBack(Z)V
++    invoke-virtual {p1, v1}, Lcom/mobile/myeye/widget/SplitRelativeLayout;->setBack(Z)V
+ 
+     return-void
+ 
+@@ -9604,7 +9604,7 @@
+ 
+     xor-int/2addr p1, v1
+ 
+-    invoke-virtual {p2, p1}, Lcom/mobile/myeye/widget/SplitRelativeLayout;->setDoubleClickBack(Z)V
++    invoke-virtual {p2, p1}, Lcom/mobile/myeye/widget/SplitRelativeLayout;->setBack(Z)V
+ 
+     .line 26
+     invoke-static {}, Lc/h/a/b;->f()Lc/h/a/b;
+diff --git a/smali_classes2/com/mobile/myeye/widget/SplitRelativeLayout.smali b/smali_classes2/com/mobile/myeye/widget/SplitRelativeLayout.smali
+index 0e2bd98d..61d44ec5 100644
+--- a/smali_classes2/com/mobile/myeye/widget/SplitRelativeLayout.smali
++++ b/smali_classes2/com/mobile/myeye/widget/SplitRelativeLayout.smali
+@@ -1045,7 +1045,7 @@
+     return p1
+ .end method
+ 
+-.method public setDoubleClickBack(Z)V
++.method public setBack(Z)V
+     .locals 0
+ 
+     .line 1
+diff --git a/smali_classes2/com/ui/media/VideoWndCtrl.smali b/smali_classes2/com/ui/media/VideoWndCtrl.smali
+index b2d3d8fd..d142f8b6 100644
+--- a/smali_classes2/com/ui/media/VideoWndCtrl.smali
++++ b/smali_classes2/com/ui/media/VideoWndCtrl.smali
+@@ -1873,7 +1873,7 @@
+     return-void
+ .end method
+ 
+-.method public setDisableDoubleClick(Z)V
++.method public setDisable(Z)V
+     .locals 0
+ 
+     .line 1
